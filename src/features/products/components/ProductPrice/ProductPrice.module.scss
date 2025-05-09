@@ -1,0 +1,19 @@
+@use '../../../../assets/styles/variables' as *;
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: $text-primary;
+
+  sup {
+    font-size: 0.75rem;
+    vertical-align: super;
+    margin-left: 2px;
+  }
+
+  .currency {
+    font-size: 0.85rem;
+    margin-left: 4px;
+    color: $text-muted;
+  }
+}

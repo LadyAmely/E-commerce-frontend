@@ -1,0 +1,39 @@
+@use '../../../../assets/styles/variables' as *;
+
+.card {
+  background-color: $white;
+  border: 1px solid $border-color;
+  border-radius: $radius-md;
+  padding: 1rem;
+  box-shadow: $shadow-sm;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.75rem;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: $shadow-md;
+  }
+}
+
+.name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: $text-primary;
+}
+
+.addButton {
+  padding: 0.5rem 1rem;
+  background-color: $primary-color;
+  color: $white;
+  border: none;
+  border-radius: $radius-sm;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: $primary-color-dark;
+  }
+}
