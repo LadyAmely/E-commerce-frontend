@@ -1,19 +1,15 @@
 import React from 'react';
-import Navbar from "../../molecules/Navbar/Navbar";
-import Hero from "../../organisms/Hero/Hero";
 import ProductList from "../../../features/products/components/ProductList/ProductList";
-import Footer from "../../organisms/Footer/Footer";
+import MainLayout from "../../../layouts/MainLayout";
+
 
 
 const ProductPage: React.FC = () => {
 
     return(
-        <div>
-            <Navbar variant="dark" totalItems={5} />
-            <Hero/>
-            <ProductList/>
-            <Footer/>
-        </div>
+        <>
+            <MainLayout children={<ProductList/>}/>
+        </>
     );
 }
 

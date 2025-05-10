@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProductPage from './components/templates/Product/ProductPage';
-import CheckoutPage from "./components/templates/Checkout/CheckoutPage";
+import CartPage from "./components/templates/Cart/CartPage";
 
 
 const App = () => {
@@ -8,7 +8,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<ProductPage />} />
-          <Route path="/cart" element={<CheckoutPage />} />
+          <Route path="/cart" element={<CartPage />} />
         </Routes>
       </Router>
   );

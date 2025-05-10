@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './CartItem.module.scss';
-import {CartItemProps} from "./CartItem.types";
-
+import type { CartItemProps } from './CartItem.types';
+import QuantitySelector from '../QuantitySelector/QuantitySelector';
 
 const CartItem: React.FC<CartItemProps> = ({
                                                id,
@@ -13,6 +13,7 @@ const CartItem: React.FC<CartItemProps> = ({
                                                onRemove,
                                            }) => {
     const total = (price.main + price.fractional / 100) * quantity;
+    const formattedTotal = total.toFixed(2).replace('.', ',');
 
     return (
         <div className={styles.cartItem}>
@@ -23,14 +24,14 @@ const CartItem: React.FC<CartItemProps> = ({
         </span>
             </div>
 
-            <div className={styles.controls}>
-                <button onClick={() => onDecrease(id)} disabled={quantity <= 1}>-</button>
-                <span className={styles.quantity}>{quantity}</span>
-                <button onClick={() => onIncrease(id)}>+</button>
-            </div>
+            <QuantitySelector
+                quantity={quantity}
+                onIncrease={() => onIncrease(id)}
+                onDecrease={() => onDecrease(id)}
+            />
 
             <div className={styles.total}>
-                {total.toFixed(2).replace('.', ',')} zł
+                {formattedTotal} zł
             </div>
 
             <button className={styles.remove} onClick={() => onRemove(id)}>

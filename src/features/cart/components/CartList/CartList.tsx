@@ -3,7 +3,6 @@ import CartItem from '../CartItem/CartItem';
 import styles from './CartList.module.scss';
 import {CartListProps} from "./CartList.types";
 
-
 const CartList: React.FC<CartListProps> = ({ items, onIncrease, onDecrease, onRemove }) => {
     if (items.length === 0) {
         return <p className={styles.empty}>Twój koszyk jest pusty.</p>;
