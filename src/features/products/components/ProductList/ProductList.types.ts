@@ -1,6 +1,5 @@
 import type { Product } from '../../types';
 
-export interface ProductCardProps {
-    product: Product;
+export interface ProductListProps {
     onAddToCart: (product: Product) => void;
 }

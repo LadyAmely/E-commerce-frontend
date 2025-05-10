@@ -14,7 +14,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
             />
             <button
                 className={styles.addButton}
-                onClick={() => onAddToCart(product.id)}
+                onClick={() => onAddToCart(product)}
             >
                 Dodaj do koszyka
             </button>
