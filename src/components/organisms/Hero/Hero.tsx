@@ -8,7 +8,6 @@ const Hero: React.FC = () => {
             <div className={styles.imageContainer}>
                 <img src={heroImage} alt="Fresh food offer" />
             </div>
-
             <div className={styles.content}>
                 <h1>
                     Welcome to Veggable Store. Get 20% off<br/> your first 4 grocery orders
@@ -20,7 +19,6 @@ const Hero: React.FC = () => {
                 <button className={styles.ctaButton}>
                     USE CODE VEGGABLE20
                 </button>
-
             </div>
         </section>
     );

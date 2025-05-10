@@ -1,0 +1,32 @@
+@use '../../../../assets/styles/variables' as *;
+
+.summary {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid $border-color;
+  border-radius: $radius-md;
+  background-color: $gray-50;
+  box-shadow: $shadow-sm;
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: $text-primary;
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: $text-secondary;
+}
+
+.total {
+  color: $text-primary;
+  font-size: 1.2rem;
+  font-weight: 700;
+}

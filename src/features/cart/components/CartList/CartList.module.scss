@@ -1,0 +1,18 @@
+@use '../../../../assets/styles/variables' as *;
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.empty {
+  padding: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: $text-muted;
+  border: 1px dashed $border-color;
+  border-radius: $radius-md;
+  background-color: $gray-50;
+}
