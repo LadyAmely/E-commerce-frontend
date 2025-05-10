@@ -12,7 +12,7 @@ const OrderSummaryList: React.FC<OrderSummaryListProps> = ({ items }) => {
     return (
         <div className={styles.orderSummaryList}>
             {items.map((item) => (
-                <OrderItem key={item.id} {...item} />
+                <OrderItem key={item.id} item={item} />
             ))}
         </div>
     );
