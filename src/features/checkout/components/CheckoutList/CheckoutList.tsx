@@ -10,7 +10,7 @@ const CheckoutList: React.FC<CheckoutListProps> = ({ items }) => {
                 <p className={styles.empty}>Koszyk jest pusty.</p>
             ) : (
                 items.map((item) => (
-                    <CheckoutItem key={item.id} {...item} />
+                    <CheckoutItem key={item.id} item={item} />
                 ))
             )}
         </div>

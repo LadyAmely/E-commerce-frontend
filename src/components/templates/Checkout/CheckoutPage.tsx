@@ -1,35 +1,27 @@
 import React from 'react';
-import CheckoutList from "../../../features/checkout/components/CheckoutList/CheckoutList";
-import CheckoutSummary from "../../../features/checkout/components/CheckoutSummary/CheckoutSummary";
-import MainLayout from "../../../layouts/MainLayout";
+import { useSelector } from 'react-redux';
+import type { RootState } from '../../../store';
+import CheckoutList from '../../../features/checkout/components/CheckoutList/CheckoutList';
+import CheckoutSummary from '../../../features/checkout/components/CheckoutSummary/CheckoutSummary';
+import MainLayout from '../../../layouts/MainLayout';
 
+const CheckoutPage: React.FC = () => {
+    const cartItems = useSelector((state: RootState) => state.cart.items);
 
-const CheckoutPage: React.FC =()=>{
-
-    const items = [
-        {
-            id: 1,
-            name: 'Banany BIO',
-            price: { main: 3, fractional: 49 },
-            quantity: 2,
-        },
-        {
-            id: 2,
-            name: 'Mleko 3.2%',
-            price: { main: 2, fractional: 89 },
-            quantity: 1,
-        },
-    ];
-
-
-    return(
-        <>
-            <MainLayout>
-                <CheckoutList items={items} />
-                <CheckoutSummary total={4} />
-            </MainLayout>
-        </>
+    const total = cartItems.reduce(
+        (sum, item) =>
+            sum + (item.price.main + item.price.fractional / 100) * item.quantity,
+        0
     );
-}
+
+    return (
+        <MainLayout>
+            <>
+                <CheckoutList items={cartItems} />
+                <CheckoutSummary total={total} />
+            </>
+        </MainLayout>
+    );
+};
 
 export default CheckoutPage;
