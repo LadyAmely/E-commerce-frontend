@@ -1,0 +1,33 @@
+@use '../../../../assets/styles/variables' as *;
+
+.orderTotal {
+  margin-top: 2rem;
+  padding: 1.25rem 2rem;
+  background-color: $gray-50;
+  border: 1px solid $border-color;
+  border-radius: $radius-md;
+  box-shadow: $shadow-sm;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .label {
+    font-size: 1rem;
+    color: $text-secondary;
+  }
+
+  .value {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $text-primary;
+  }
+}
+
+
+

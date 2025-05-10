@@ -1,0 +1,20 @@
+@use './variables' as *;
+
+.linkWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2rem 2rem 2rem 2rem;
+}
+
+.returnLink {
+  font-size: 0.95rem;
+  color: $primary-color;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+
+  &:hover {
+    color: $primary-color-dark;
+    text-decoration: underline;
+  }
+}
