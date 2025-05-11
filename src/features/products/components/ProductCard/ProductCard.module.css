@@ -22,18 +22,3 @@
   font-weight: 600;
   color: var(--text-primary);
 }
-
-.addButton {
-  padding: 0.5rem 1rem;
-  background-color: var(--primary-color);
-  color: var(--white);
-  border: none;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  font-weight: 500;
-  transition: background-color 0.2s ease;
-}
-
-.addButton:hover {
-  background-color: var(--primary-color-dark);
-}

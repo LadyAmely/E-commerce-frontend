@@ -1,16 +1,10 @@
 import React from 'react';
 import MainLayout from '../../../layouts/MainLayout';
 import ProductList from '../../../features/products/components/ProductList/ProductList';
-import {useDispatch} from 'react-redux';
-import {addToCart} from '../../../features/cart/cartSlice';
-import { Product } from '../../../features/products/types';
+import {useProductCartActions} from "./hooks";
 
 const ProductPage: React.FC = () => {
-    const dispatch = useDispatch();
-
-    const handleAddToCart = (product: Product) => {
-        dispatch(addToCart(product));
-    };
+    const { handleAddToCart } = useProductCartActions();
 
     return (
         <MainLayout>
@@ -20,4 +14,5 @@ const ProductPage: React.FC = () => {
 };
 
 export default ProductPage;
+
 

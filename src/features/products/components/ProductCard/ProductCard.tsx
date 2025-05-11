@@ -3,6 +3,8 @@ import styles from './ProductCard.module.css';
 import ProductPrice from '../ProductPrice/ProductPrice';
 import { ProductCardProps } from './ProductCard.types';
 import { useProductActions } from './hooks';
+import Button from "../../../../components/atoms/Button/Button";
+
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
     const { handleAddToCartAndNavigate } = useProductActions(product, onAddToCart);
@@ -14,14 +16,18 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
                 main={product.price.main}
                 fractional={product.price.fractional}
             />
-            <button className={styles.addButton} onClick={handleAddToCartAndNavigate}>
+            <Button
+                className={styles.addButton}
+                onClick={handleAddToCartAndNavigate}
+            >
                 Dodaj do koszyka
-            </button>
+            </Button>
         </div>
     );
 };
 
 export default ProductCard;
+
 
 
 

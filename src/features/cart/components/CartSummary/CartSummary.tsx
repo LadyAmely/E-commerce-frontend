@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './CartSummary.module.css';
-import {CartSummaryProps} from "./CartSummary.types";
-import {Link, useNavigate} from "react-router-dom";
-
+import { CartSummaryProps } from "./CartSummary.types";
+import { Link, useNavigate } from "react-router-dom";
+import Button from "../../../../components/atoms/Button/Button";
 
 
 const CartSummary: React.FC<CartSummaryProps> = ({ total }) => {
@@ -18,12 +18,16 @@ const CartSummary: React.FC<CartSummaryProps> = ({ total }) => {
             </div>
             <div className={styles.actions}>
                 <Link to="/" className={styles.backLink}>← Powrót do listy produktów</Link>
-                <button className={styles.checkoutButton} onClick={() => navigate('/checkout')}>
+                <Button
+                    className={styles.checkoutButton}
+                    onClick={() => navigate('/checkout')}
+                >
                     Przejdź do podsumowania zamówienia
-                </button>
+                </Button>
             </div>
         </div>
     );
 };
 
 export default CartSummary;
+

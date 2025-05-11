@@ -16,9 +16,6 @@ const Hero: React.FC = () => {
                     Odkryj najświeższą żywność z dostawą do domu. Zdrowe odżywianie jeszcze nigdy nie było tak proste.
                     Użyj kodu <strong>Veggable20</strong> przy finalizacji zamówienia.
                 </p>
-                <button className={styles.ctaButton}>
-                    UŻYJ KODU VEGGABLE20
-                </button>
             </div>
         </section>
     );

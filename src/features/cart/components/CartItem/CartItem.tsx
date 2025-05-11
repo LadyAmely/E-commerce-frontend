@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './CartItem.module.css';
 import type { CartItemProps } from './CartItem.types';
 import QuantitySelector from '../QuantitySelector/QuantitySelector';
+import Button from "../../../../components/atoms/Button/Button";
+
 
 const CartItem: React.FC<CartItemProps> = ({
                                                id,
@@ -20,8 +22,8 @@ const CartItem: React.FC<CartItemProps> = ({
             <div className={styles.details}>
                 <span className={styles.name}>{name}</span>
                 <span className={styles.price}>
-          {price.main},{price.fractional.toString().padStart(2, '0')} zł / szt.
-        </span>
+                    {price.main},{price.fractional.toString().padStart(2, '0')} zł / szt.
+                </span>
             </div>
 
             <QuantitySelector
@@ -34,9 +36,12 @@ const CartItem: React.FC<CartItemProps> = ({
                 {formattedTotal} zł
             </div>
 
-            <button className={styles.remove} onClick={() => onRemove(id)}>
+            <Button
+                className={styles.remove}
+                onClick={() => onRemove(id)}
+            >
                 Usuń
-            </button>
+            </Button>
         </div>
     );
 };
