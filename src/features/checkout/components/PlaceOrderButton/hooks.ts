@@ -12,7 +12,7 @@ export const usePlaceOrder = () => {
         if (cartItems.length === 0) return;
         localStorage.setItem('lastOrder', JSON.stringify(cartItems));
         dispatch(resetCart());
-        window.location.href = '/confirmation.html';
+        window.location.href = `${process.env.PUBLIC_URL}/confirmation.html`;
     };
 
     return { placeOrder, isCartEmpty: cartItems.length === 0 };

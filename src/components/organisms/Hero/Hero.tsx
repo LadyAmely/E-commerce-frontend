@@ -6,18 +6,18 @@ const Hero: React.FC = () => {
     return (
         <section className={styles.hero}>
             <div className={styles.imageContainer}>
-                <img src={heroImage} alt="Fresh food offer" />
+                <img src={heroImage} alt="Fresh food offer"/>
             </div>
             <div className={styles.content}>
                 <h1>
-                    Welcome to Veggable Store. Get 20% off<br/> your first 4 grocery orders
+                    Witamy w Veggable Store. Odbierz 20% zniżki<br/> na pierwsze 4 zamówienia spożywcze
                 </h1>
                 <p>
-                    Discover the freshest food delivered to your door. Enjoy healthy eating made easy with this offer.
-                    Use code <strong>Veggable20</strong> at checkout.
+                    Odkryj najświeższą żywność z dostawą do domu. Zdrowe odżywianie jeszcze nigdy nie było tak proste.
+                    Użyj kodu <strong>Veggable20</strong> przy finalizacji zamówienia.
                 </p>
                 <button className={styles.ctaButton}>
-                    USE CODE VEGGABLE20
+                    UŻYJ KODU VEGGABLE20
                 </button>
             </div>
         </section>

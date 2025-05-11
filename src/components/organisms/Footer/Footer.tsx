@@ -7,35 +7,35 @@ const Footer: React.FC = () => {
             <div className={styles.top}>
                 <div className={styles.columns}>
                     <div className={styles.column}>
-                        <h4>Shop</h4>
-                        <a href="#">Shop Featured Items</a>
-                        <a href="#">Meal Solutions</a>
-                        <a href="#">Gift Cards</a>
-                        <a href="#">Refer A Friend</a>
-                        <a href="#">Join Membership</a>
+                        <h4>Sklep</h4>
+                        <a href="#">Polecane produkty</a>
+                        <a href="#">Gotowe rozwiązania posiłków</a>
+                        <a href="#">Karty podarunkowe</a>
+                        <a href="#">Zaproś znajomego</a>
+                        <a href="#">Dołącz do programu</a>
                     </div>
 
                     <div className={styles.column}>
-                        <h4>About Good Eggs</h4>
-                        <a href="#">About Us</a>
+                        <h4>O Veggable</h4>
+                        <a href="#">O nas</a>
                         <a href="#">Blog</a>
-                        <a href="#">Food Standards</a>
-                        <a href="#">How It Works</a>
-                        <a href="#">Careers</a>
-                        <a href="#">Sell Your Goods</a>
+                        <a href="#">Standardy żywności</a>
+                        <a href="#">Jak to działa</a>
+                        <a href="#">Kariera</a>
+                        <a href="#">Sprzedawaj z nami</a>
                     </div>
 
                     <div className={styles.column}>
-                        <h4>Holiday Guides</h4>
-                        <a href="#">Thanksgiving</a>
-                        <a href="#">Winter Holidays</a>
+                        <h4>Przewodniki świąteczne</h4>
+                        <a href="#">Święto Dziękczynienia</a>
+                        <a href="#">Zimowe święta</a>
                     </div>
 
                     <div className={styles.column}>
-                        <h4>Need Help?</h4>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Contact Us</a>
-                        <a href="#">Help Center</a>
+                        <h4>Potrzebujesz pomocy?</h4>
+                        <a href="#">Polityka prywatności</a>
+                        <a href="#">Kontakt</a>
+                        <a href="#">Centrum pomocy</a>
                     </div>
                 </div>
             </div>
