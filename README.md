@@ -1,46 +1,121 @@
-# Getting Started with Create React App
+## Getting Started
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Clone the repository
+ 
+`git clone https://github.com/LadyAmely/Veggable.git`
 
-## Available Scripts
+2. Navigate to the project directory
+   
+`cd Veggable`
 
-In the project directory, you can run:
+3. Install dependencies
 
-### `npm start`
+`npm install`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+4. Start the development server
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+`npm start`
 
-### `npm test`
+The app will be available at http://localhost:4000/Veggable/ by default.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Project structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ src/
+├── App.css                      # Global styles or resets
+├── App.test.tsx                # Unit test for root component
+├── App.tsx                     # Root application component
+│
+├── assets/                     # Static and global design assets
+│   ├── images/                 # Image files (icons, illustrations, etc.)
+│   └── styles/
+│       └── variables.css       # Global CSS variables (used instead of SCSS variables)
+│
+├── components/                 # Reusable UI components (based on Atomic Design)
+│   ├── atoms/                  # Smallest UI elements (e.g., buttons, inputs)
+│   ├── molecules/              # Combinations of atoms (e.g., input + label)
+│   ├── organisms/              # Sections composed of molecules/atoms (e.g., navbar)
+│   └── templates/              # Page layout templates
+│
+├── features/                   # Domain-driven modules grouped by feature
+│   ├── cart/                   # Cart feature module
+│   │   ├── components/         # Components specific to cart UI
+│   │   │   ├── CartActions/            # Action bar (e.g., back & checkout buttons)
+│   │   │   ├── CartItem/               # Single item displayed in the cart
+│   │   │   ├── CartList/               # List of cart items
+│   │   │   ├── CartSummary/            # Cart totals, summary section
+│   │   │   └── QuantitySelector/       # Quantity increment/decrement control
+│   │   ├── hooks/              # Custom hooks related to cart behavior
+│   │   └── cartSlice.ts        # Redux slice for cart state management
+│
+│   ├── checkout/               # Checkout process module
+│   │   ├── components/
+│   │   │   ├── CheckoutItem/           # Line item displayed during checkout
+│   │   │   ├── CheckoutList/           # List of all checkout items
+│   │   │   ├── CheckoutSummary/        # Total price, payment summary
+│   │   │   └── PlaceOrderButton/       # Final "place order" button
+│
+│   └── products/               # Product listing and details module
+│       ├── components/
+│       │   ├── ProductCard/            # Product display card
+│       │   ├── ProductList/            # Grid/list of products
+│       │   └── ProductPrice/           # Price display component
+│       ├── data/               # Product mock data, static JSONs, etc.
+│       ├── hooks/              # Product-related custom hooks
+│       └── types.ts            # Shared product types/interfaces
+│
+├── layouts/                    # Page layout wrappers (e.g., headers, footers, containers)
+│
+├── store/                      # Global Redux store configuration
 
-### `npm run eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Architecture Overview
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project follows a Feature-Driven Modular Architecture in combination with the Atomic Design methodology. The structure promotes scalability, reusability, and domain encapsulation, inspired by [this article][fdd-article].
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+...
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[fdd-article]: https://medium.com/@muhmdshanoob/feature-driven-modular-architecture-in-react-focusing-on-scalability-reusability-and-atomic-76d9579ac60e
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🔹 Feature-Driven Structure (src/features/)
+The core business logic is grouped by feature (e.g., cart, checkout, products). Each feature encapsulates its own:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Components (UI-specific to the feature)
+
+Hooks (custom logic tied to the feature)
+
+Redux slice (local state management)
+
+Data (e.g., mocks or static content)
+
+Types/interfaces
+
+This ensures modularity and clear ownership of each domain.
+
+🔹 Atomic Design (src/components/)
+Reusable UI components are organized according to Atomic Design principles:
+
+Atoms – base UI elements (e.g., Button)
+
+Molecules – small groups of atoms
+
+Organisms – larger components combining multiple molecules/atoms (e.g., Navbar)
+
+Templates – layout-level structures used across pages
+
+This pattern encourages reusability and consistent UI composition.
+
+🔹 Layouts & Global Styling
+layouts/ contains global layout wrappers (e.g., header/footer containers)
+
+assets/styles/variables.css centralizes global design tokens like colors
+
+assets/images/ stores icons and illustrations
