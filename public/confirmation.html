@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <title>Zamówienie złożone</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #f4f4f4;
+            padding: 2rem;
+        }
+        h1 {
+            color: #2f855a;
+        }
+        .order-list {
+            margin-top: 1rem;
+            padding-left: 1rem;
+        }
+        .back {
+            margin-top: 2rem;
+            display: inline-block;
+            color: #5a67d8;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<h1>Zamówienie złożone pomyślnie!</h1>
+<ul class="order-list" id="orderItems"></ul>
+<p id="total"></p>
+<a href="/" class="back">← Wróć do sklepu</a>
+
+<script>
+    const order = JSON.parse(localStorage.getItem('lastOrder') || '[]');
+    let total = 0;
+    const list = document.getElementById('orderItems');
+    const totalElement = document.getElementById('total');
+
+    if (order.length === 0) {
+        list.innerHTML = '<li>Brak danych o zamówieniu.</li>';
+    } else {
+        order.forEach(item => {
+            const subtotal = (item.price.main + item.price.fractional / 100) * item.quantity;
+            total += subtotal;
+            const li = document.createElement('li');
+            li.textContent = `${item.name} x${item.quantity} – ${subtotal.toFixed(2).replace('.', ',')} zł`;
+            list.appendChild(li);
+        });
+        totalElement.innerHTML = `<strong>Łączna kwota:</strong> ${total.toFixed(2).replace('.', ',')} zł`;
+        localStorage.removeItem('lastOrder');
+    }
+</script>
+</body>
+</html>
