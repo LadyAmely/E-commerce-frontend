@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
-import styles from './Navbar.module.scss';
+import styles from './Navbar.module.css';
 import type { NavbarProps } from './Navbar.types';
 
 const Navbar: React.FC<NavbarProps> = ({ variant, totalItems = 0, ...rest }) => {

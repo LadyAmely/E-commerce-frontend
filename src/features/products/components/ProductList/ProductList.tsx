@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './ProductList.module.scss';
+import styles from './ProductList.module.css';
 import { useProducts } from '../../hooks/useProducts';
 import ProductCard from '../ProductCard/ProductCard';
 import {ProductListProps} from "./ProductList.types";

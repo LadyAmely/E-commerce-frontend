@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './QuantitySelector.module.scss';
+import styles from './QuantitySelector.module.css';
 import {QuantitySelectorProps} from "./QuantitySelector.types";
 
 

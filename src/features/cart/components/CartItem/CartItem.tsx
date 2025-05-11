@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './CartItem.module.scss';
+import styles from './CartItem.module.css';
 import type { CartItemProps } from './CartItem.types';
 import QuantitySelector from '../QuantitySelector/QuantitySelector';
 

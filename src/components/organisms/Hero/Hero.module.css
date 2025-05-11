@@ -1,0 +1,81 @@
+@import '../../../assets/styles/variables.css';
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: var(--background-light);
+  border-bottom: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+}
+
+.imageContainer {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.imageContainer img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .imageContainer {
+    padding-right: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.content p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 450px;
+}
+
+.ctaButton {
+  align-self: start;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .ctaButton {
+    align-self: center;
+  }
+}

@@ -1,4 +1,4 @@
-@use '../../../../assets/styles/variables' as *;
+@import '../../../../assets/styles/variables.css';
 
 .grid {
   display: grid;
@@ -6,3 +6,4 @@
   gap: 1.5rem;
   padding: 2rem;
 }
+

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './CartActions.module.scss';
+import styles from './CartActions.module.css';
 import {Link} from "react-router-dom";
 
 

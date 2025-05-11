@@ -1,6 +1,6 @@
 import React from 'react';
 import CartItem from '../CartItem/CartItem';
-import styles from './CartList.module.scss';
+import styles from './CartList.module.css';
 import {CartListProps} from "./CartList.types";
 
 const CartList: React.FC<CartListProps> = ({ items, onIncrease, onDecrease, onRemove }) => {

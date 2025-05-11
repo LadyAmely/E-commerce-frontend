@@ -1,15 +1,9 @@
 import React from 'react';
-import styles from './Button.module.scss';
+import styles from './Button.module.css';
 import { ButtonProps } from './Button.types';
 
-const Button: React.FC<ButtonProps> = ({
-                                           variant,
-                                           children,
-                                           className = '',
-                                           ...props
-                                       }) => {
-    const variantClass = styles[`button--${variant}`];
-    const classes = `${styles.button} ${variantClass} ${className}`.trim();
+const Button: React.FC<ButtonProps> = ({ children, className = '', ...props }) => {
+    const classes = `${styles.button} ${className}`.trim();
 
     return (
         <button className={classes} {...props}>
@@ -19,3 +13,4 @@ const Button: React.FC<ButtonProps> = ({
 };
 
 export default Button;
+

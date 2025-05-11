@@ -1,10 +1,7 @@
 import React from 'react';
-import styles from './CheckoutItem.module.scss';
-import { CartItem } from '../../../cart/cartSlice';
+import styles from './CheckoutItem.module.css';
+import {CheckoutItemProps} from "./CheckoutItem.types";
 
-interface CheckoutItemProps {
-    item: CartItem;
-}
 
 const CheckoutItem: React.FC<CheckoutItemProps> = ({ item }) => {
     const { name, price, quantity } = item;

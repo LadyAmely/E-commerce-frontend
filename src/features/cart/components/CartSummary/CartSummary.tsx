@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './CartSummary.module.scss';
+import styles from './CartSummary.module.css';
 import {CartSummaryProps} from "./CartSummary.types";
 import {Link, useNavigate} from "react-router-dom";
 

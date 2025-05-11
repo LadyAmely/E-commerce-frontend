@@ -1,9 +1,5 @@
-export interface CheckoutItem {
-    id: number;
-    name: string;
-    quantity: number;
-    price: {
-        main: number;
-        fractional: number;
-    };
+import {CartItem} from "../../../cart/cartSlice";
+
+export interface CheckoutItemProps {
+    item: CartItem;
 }

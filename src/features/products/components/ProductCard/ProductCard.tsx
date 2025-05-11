@@ -1,16 +1,11 @@
 import React from 'react';
-import styles from './ProductCard.module.scss';
+import styles from './ProductCard.module.css';
 import ProductPrice from '../ProductPrice/ProductPrice';
 import { ProductCardProps } from './ProductCard.types';
-import { useNavigate } from 'react-router-dom';
+import { useProductActions } from './hooks';
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
-    const navigate = useNavigate();
-
-    const handleClick = () => {
-        onAddToCart(product);
-        navigate('/cart');
-    };
+    const { handleAddToCartAndNavigate } = useProductActions(product, onAddToCart);
 
     return (
         <div className={styles.card}>
@@ -19,7 +14,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
                 main={product.price.main}
                 fractional={product.price.fractional}
             />
-            <button className={styles.addButton} onClick={handleClick}>
+            <button className={styles.addButton} onClick={handleAddToCartAndNavigate}>
                 Dodaj do koszyka
             </button>
         </div>
@@ -27,5 +22,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onAddToCart }) => {
 };
 
 export default ProductCard;
+
 
 

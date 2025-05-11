@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './CheckoutList.module.scss';
+import styles from './CheckoutList.module.css';
 import CheckoutItem from '../CheckoutItem/CheckoutItem';
 import { CheckoutListProps } from './CheckoutList.types';
 

@@ -1,8 +1,6 @@
 import React from 'react';
-import styles from './ProductPrice.module.scss';
+import styles from './ProductPrice.module.css';
 import {ProductPriceProps} from "./ProductPrice.types";
-
-
 
 const ProductPrice: React.FC<ProductPriceProps> = ({ main, fractional }) => {
     return (
