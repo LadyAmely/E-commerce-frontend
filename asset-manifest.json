@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Veggable/static/css/main.f36a3102.css",
-    "main.js": "/Veggable/static/js/main.6da7b504.js",
+    "main.js": "/Veggable/static/js/main.2b385f90.js",
     "static/js/453.8ab44547.chunk.js": "/Veggable/static/js/453.8ab44547.chunk.js",
     "static/media/banner.png": "/Veggable/static/media/banner.806b1a466dc7d42a32b0.png",
     "index.html": "/Veggable/index.html",
     "main.f36a3102.css.map": "/Veggable/static/css/main.f36a3102.css.map",
-    "main.6da7b504.js.map": "/Veggable/static/js/main.6da7b504.js.map",
+    "main.2b385f90.js.map": "/Veggable/static/js/main.2b385f90.js.map",
     "453.8ab44547.chunk.js.map": "/Veggable/static/js/453.8ab44547.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f36a3102.css",
-    "static/js/main.6da7b504.js"
+    "static/js/main.2b385f90.js"
   ]
 }
