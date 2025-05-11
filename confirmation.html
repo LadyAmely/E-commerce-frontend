@@ -28,7 +28,7 @@
 <h1>Zamówienie złożone pomyślnie!</h1>
 <ul class="order-list" id="orderItems"></ul>
 <p id="total"></p>
-<a href="/" class="back">← Wróć do sklepu</a>
+<a href="%PUBLIC_URL%/" class="back">← Wróć do sklepu</a>
 
 <script>
     const order = JSON.parse(localStorage.getItem('lastOrder') || '[]');
